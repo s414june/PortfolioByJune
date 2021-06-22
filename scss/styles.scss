@@ -1,0 +1,123 @@
+$menuWidth:200px;
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+}
+
+.navbar {
+    padding: 1rem;
+    width: calc(100vw - 2rem);
+    font-size: 2rem;
+    box-shadow: 0 1px 5px #aaa;
+    display: flex;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 3rem;
+    position: fixed;
+    top: 0;
+    width: $menuWidth;
+    height: 100vh;
+    background-color: #ffffff;
+    box-shadow: -1px 5px 5px #aaa;
+    transform: translateX(100vw);
+    transition: .5s;
+    z-index: 30;
+    cursor: pointer;
+    &.active {
+        transform: translateX(calc(100vw - #{$menuWidth} - 6rem));
+        transition: .5s;
+    }
+    .logo {
+        font-size: 2rem;
+        font-weight: normal;
+        // text-align: right;
+        padding: 1rem;
+    }
+    p {
+        padding: 1rem;
+        font-size: 1.2rem;
+        font-family: 'Noto Sans TC', sans-serif;
+        font-family: 'Raleway', sans-serif;
+    }
+}
+
+.mask {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    z-index: 29;
+}
+
+main {
+    padding: 5rem;
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    #about {
+        padding: 0 5rem;
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            img {
+                border-radius: 50%;
+                width: 200px;
+            }
+            div {
+                padding: 1.5rem 2rem;
+                &:nth-child(2) {
+                    text-align: left;
+                    font-size: 1.2rem;
+                    font-family: 'Noto Sans TC', sans-serif;
+                    font-weight: 400;
+                }
+                &:nth-child(3) {
+                    font-family: 'Noto Sans TC', sans-serif;
+                    font-family: 'Raleway', sans-serif;
+                }
+            }
+            .buttons {
+                padding: 0;
+                span {
+                    margin: 20px 0;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 6px;
+                    padding: 12px 15px;
+                    font-size: 1rem;
+                }
+                i {
+                    font-size: 3.1rem;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

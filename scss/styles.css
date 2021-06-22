@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html a {
+  color: #000;
+  text-decoration: none;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+}
+
+.navbar {
+  padding: 1rem;
+  width: calc(100vw - 2rem);
+  font-size: 2rem;
+  -webkit-box-shadow: 0 1px 5px #aaa;
+          box-shadow: 0 1px 5px #aaa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.menu {
+  padding: 3rem;
+  position: fixed;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #ffffff;
+  -webkit-box-shadow: -1px 5px 5px #aaa;
+          box-shadow: -1px 5px 5px #aaa;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: .5s;
+  transition: .5s;
+  z-index: 30;
+  cursor: pointer;
+}
+
+.menu.active {
+  -webkit-transform: translateX(calc(100vw - 200px - 6rem));
+          transform: translateX(calc(100vw - 200px - 6rem));
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.menu .logo {
+  font-size: 2rem;
+  font-weight: normal;
+  padding: 1rem;
+}
+
+.menu p {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+.mask {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 29;
+}
+
+main {
+  padding: 5rem;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+main #about {
+  padding: 0 5rem;
+}
+
+main #about div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #about div img {
+  border-radius: 50%;
+  width: 200px;
+}
+
+main #about div div {
+  padding: 1.5rem 2rem;
+}
+
+main #about div div:nth-child(2) {
+  text-align: left;
+  font-size: 1.2rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+}
+
+main #about div div:nth-child(3) {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+main #about div .buttons {
+  padding: 0;
+}
+
+main #about div .buttons span {
+  margin: 20px 0;
+  background-color: #000;
+  color: #fff;
+  border-radius: 6px;
+  padding: 12px 15px;
+  font-size: 1rem;
+}
+
+main #about div .buttons i {
+  font-size: 3.1rem;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

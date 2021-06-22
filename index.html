@@ -5,54 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&family=Raleway:wght@600;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="scss/carousel.css">
+    <script src="src/carouseljs.js"></script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+
     <title>June Wu | Web Developer</title>
 </head>
-<!-- 內聯樣式 -->
-<style>
-    .home {
-        padding: 3rem;
-        width: 100vw;
-        position: fixed;
-    }
-    
-    .menu {
-        padding: 3rem;
-        position: fixed;
-        width: 50vw;
-        background-color: skyblue;
-        /* transform: translateX(50vw); */
-        transform: translateX(100vw);
-        transition: .3s;
-    }
-    
-    .active {
-        transform: translateX(50vw);
-        transition: .3s;
-    }
-</style>
+
 
 <body>
     <div id="app">
         <header>
-            <div class='home'>
-                Home
-                <button @click='toggle'>切換側邊欄</button>
+            <div class='navbar sticky' id="home">
+                <a href="index.html">
+                    <p class="logo">June Wu</p>
+                </a>
+                <div style="padding-right:3rem;">
+                    <i class="fas fa-bars" @click='toggle'></i>
+                </div>
             </div>
+            <div class="mask" v-show="isShow" @click='toggle'></div>
             <div class='menu' :class={active:isShow}>
-                Menu
+                <p @click="goto('home')">Home</p>
+                <p @click="goto('about')">About me</p>
+                <p>Skills</p>
+                <p>Works</p>
+                <p>Contact</p>
             </div>
+            <section class="carouselOutside">
+                <div class="carousel carousel-ad">
+                    <div class="title">
+                        <h3 v-show="isShowTitle" class="animate__animated animate__fadeInLeft">Reading, Painting, Coding</h3>
+                        <p class="animate__animated animate__fadeInRight">June Wu's portfolio</p>
+                    </div>
+                    <div class="click-down">
+                        <a href="#about">
+                            <h4 class="animate__animated animate__bounce animate__infinite">
+                                <i class="fas fa-chevron-down"></i>
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
         </header>
         <main>
-            <section>
-                about me
+            <section id="about">
+                <h2>about me</h2>
+                <div>
+                    <div>
+                        <img src="img/face.jpg" alt="June's face">
+                    </div>
+                    <div>
+                        <p>畢業於國北教育大學，語文與創作、數位科技設計雙主修。</p>
+                        <p>喜愛閱讀、繪畫、音樂等藝術，也熱愛科學。在程式語言中，找到了實踐藝術的樂趣。</p>
+                    </div>
+                    <div class="buttons">
+                        <span>
+                            View June's Resume
+                        </span>
+                        <a href="https://github.com/s414june" target="_blank">
+                            <i class="fab fa-github-square"></i>
+                        </a>
+                    </div>
+                </div>
             </section>
             <section>
-                skills
+                <h2>skills</h2>
             </section>
             <section>
-                Projects
+                <h2>Works</h2>
             </section>
+            <h2>Contact</h2>
+            <form action="https://formspree.io/f/s414june@gmail.com" method="post">
+                <label for="email">Your Email</label>
+                <input name="Email" id="email" type="email">
+                <button type="submit">Submit</button>
+            </form>
             <section>
 
             </section>
@@ -64,15 +114,31 @@
         let app = new Vue({
             el: "#app",
             data: {
-                isShow: false
+                isShow: false,
+                isShowTitle: true
             },
             methods: {
-                toggle: function() {
+                toggle() {
                     this.isShow = !this.isShow
+                },
+                goto(offset) {
+                    offset = document.querySelector('#' + offset)
+                    scrollTo(0, [offset][0].offsetTop)
                 }
             }
         })
     </script>
+    <script>
+        let imgListAd = [{
+            imgUrl: 'img/img (1).jpg'
+        }, {
+            imgUrl: 'img/img (2).jpg'
+        }, {
+            imgUrl: 'img/img (3).jpg'
+        }]
+        let carousel1 = carousel('.carousel-ad', imgListAd)
+    </script>
+
 </body>
 
 </html>
