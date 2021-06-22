@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>June Wu | Web Developer</title>
+</head>
+<!-- 內聯樣式 -->
+<style>
+    .home {
+        padding: 3rem;
+        width: 100vw;
+        position: fixed;
+    }
+    
+    .menu {
+        padding: 3rem;
+        position: fixed;
+        width: 50vw;
+        background-color: skyblue;
+        /* transform: translateX(50vw); */
+        transform: translateX(100vw);
+        transition: .3s;
+    }
+    
+    .active {
+        transform: translateX(50vw);
+        transition: .3s;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <header>
+            <div class='home'>
+                Home
+                <button @click='toggle'>切換側邊欄</button>
+            </div>
+            <div class='menu' :class={active:isShow}>
+                Menu
+            </div>
+        </header>
+        <main>
+            <section>
+                about me
+            </section>
+            <section>
+                skills
+            </section>
+            <section>
+                Projects
+            </section>
+            <section>
+
+            </section>
+        </main>
+    </div>
+
+
+    <script>
+        let app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false
+            },
+            methods: {
+                toggle: function() {
+                    this.isShow = !this.isShow
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
