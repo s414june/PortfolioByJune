@@ -50,14 +50,14 @@
             <div class='menu' :class={active:isShow}>
                 <p @click="goto('home')">Home</p>
                 <p @click="goto('about')">About me</p>
-                <p>Skills</p>
-                <p>Works</p>
-                <p>Contact</p>
+                <p @click="goto('skills')">Skills</p>
+                <p @click="goto('works')">Works</p>
+                <p @click="goto('contact')">Contact</p>
             </div>
             <section class="carouselOutside">
                 <div class="carousel carousel-ad">
                     <div class="title">
-                        <h3 v-show="isShowTitle" class="animate__animated animate__fadeInLeft">Reading, Painting, Coding</h3>
+                        <h3 class="animate__animated animate__fadeInLeft">Reading, Painting, Coding</h3>
                         <p class="animate__animated animate__fadeInRight">June Wu's portfolio</p>
                     </div>
                     <div class="click-down">
@@ -72,14 +72,17 @@
         </header>
         <main>
             <section id="about">
-                <h2>about me</h2>
-                <div>
+                <h2>About me</h2>
+                <div class="container">
                     <div>
                         <img src="img/face.jpg" alt="June's face">
                     </div>
-                    <div>
-                        <p>畢業於國北教育大學，語文與創作、數位科技設計雙主修。</p>
-                        <p>喜愛閱讀、繪畫、音樂等藝術，也熱愛科學。在程式語言中，找到了實踐藝術的樂趣。</p>
+                    <div class="about-content">
+                        <div class="intro">
+                            <p>畢業於國北教育大學，語文與創作、數位科技設計雙主修。</p>
+                            <p>喜愛閱讀、繪畫、音樂等藝術，也熱愛科學。</p>
+                            <p>在程式語言中，找到了實踐藝術的樂趣。</p>
+                        </div>
                     </div>
                     <div class="buttons">
                         <span>
@@ -91,22 +94,47 @@
                     </div>
                 </div>
             </section>
-            <section>
-                <h2>skills</h2>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div>
+                    <img src="img/skills/skill (1).png" alt="">
+                    <img src="img/skills/skill (2).png" alt="">
+                    <img src="img/skills/skill (3).png" alt="">
+                    <img src="img/skills/skill (4).png" alt="">
+                </div>
             </section>
-            <section>
+            <section id="works">
                 <h2>Works</h2>
+                <div class="container">
+                    <div class="flex-item" v-for="(item,index) in works">
+                        <a :href="item.src" target="_blank">
+                            <img :src="item.img" alt="">
+                            <!-- <div class="work-mask"></div> -->
+                        </a>
+                        <div>
+                            <h3>{{item.title}}</h3>
+                            <p>{{item.content}}</p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <h2>Contact</h2>
-            <form action="https://formspree.io/f/s414june@gmail.com" method="post">
-                <label for="email">Your Email</label>
-                <input name="Email" id="email" type="email">
-                <button type="submit">Submit</button>
-            </form>
-            <section>
-
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="https://formspree.io/f/xwkabgqr" method="POST">
+                    <label>
+                        <i class="fas fa-at"></i>
+                    <input type="email" name="_replyto" placeholder="Your Email">
+                    </label>
+                    <label>
+                        <i class="far fa-comment-dots"></i>
+                    <input type="text" name="message" placeholder="Your Message"></input>
+                    </label>
+                    <!-- your other form fields go here -->
+                    <button type="submit"><i class="fas fa-paper-plane"></i>Send</button>
+                </form>
             </section>
         </main>
+        <footer>© June Wu 2021 | All Rights Reserved</footer>
     </div>
 
 
@@ -115,7 +143,22 @@
             el: "#app",
             data: {
                 isShow: false,
-                isShowTitle: true
+                works: [{
+                    src: 'https://s414june.github.io/froggycoffee/',
+                    img: './img/works/work (1).jpg',
+                    title: '雛蛙咖啡',
+                    content: '文藝青年幾乎都有這樣一個夢想——開一家讀書咖啡廳。使用bootstrap和純javascript構建的購物車網頁，為前端demo。運用loaclstorage儲存資料，確認購買後會清空購物車。'
+                }, {
+                    src: 'https://s414june.github.io/greenpomo/',
+                    img: './img/works/work (2).jpg',
+                    title: '綠色番茄鐘',
+                    content: '想要解決拖延症、提高工作效率的人，應該對番茄鐘不陌生？這個計時網頁可以為使用者倒數，並記錄做了幾個番茄，用譬喻的方式增加工作趣味。使用vue-cli製作，仍在建構中。'
+                }, {
+                    src: 'https://drive.google.com/drive/folders/1IS__tl5PhjshY3wNEL5owKKEfYuZbo0D?usp=sharing',
+                    img: './img/works/work (3).jpg',
+                    title: '平面設計',
+                    content: '以大學社團設計的作品為主，佐以少量手繪。'
+                }]
             },
             methods: {
                 toggle() {
@@ -123,7 +166,11 @@
                 },
                 goto(offset) {
                     offset = document.querySelector('#' + offset)
-                    scrollTo(0, [offset][0].offsetTop)
+                    scrollTo(0, [offset][0].offsetTop - 47)
+                    this.toggle()
+                },
+                toggleHover(i) {
+                    this.isHover[i] = !this.isHover[i]
                 }
             }
         })
