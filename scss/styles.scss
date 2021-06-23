@@ -173,14 +173,19 @@ main {
                 position: relative;
                 padding: 30px;
             }
-            .work-mask {
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.5);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-            }
+            // .work-mask {
+            //     position: absolute;
+            //     opacity: 0;
+            //     width: calc(100% - 60px);
+            //     height: calc(100% - 63px);
+            //     top: 30px;
+            //     transition: .3s;
+            //     &.active {
+            //         opacity: 1;
+            //         background-color: rgba(0, 0, 0, 0.3);
+            //         transition: .3s;
+            //     }
+            // }
         }
     }
 }

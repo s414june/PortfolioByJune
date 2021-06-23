@@ -74,7 +74,7 @@
             <section id="about">
                 <h2>About me</h2>
                 <div class="container">
-                    <div>
+                    <div class="face">
                         <img src="img/face.jpg" alt="June's face">
                     </div>
                     <div class="about-content">
@@ -111,7 +111,7 @@
                     <div class="flex-item" v-for="(item,index) in works">
                         <a :href="item.src" target="_blank">
                             <img :src="item.img" alt="">
-                            <!-- <div class="work-mask"></div> -->
+                            <div class="work-mask"></div>
                         </a>
                         <div class="work-detail">
                             <h3>{{item.title}}</h3>
@@ -145,6 +145,7 @@
             el: "#app",
             data: {
                 isShow: false,
+                // isHover: false,
                 works: [{
                     src: 'https://s414june.github.io/froggycoffee/',
                     img: './img/works/work (1).jpg',
@@ -174,9 +175,6 @@
                     offset = document.querySelector('#' + offset)
                     scrollTo(0, [offset][0].offsetTop - 47)
                     this.toggle()
-                },
-                toggleHover(i) {
-                    this.isHover[i] = !this.isHover[i]
                 }
             }
         })
@@ -192,6 +190,10 @@
         let carousel1 = carousel('.carousel-ad', imgListAd)
     </script>
 
+
+    <script src="src/scroll.js"></script>
+    <script>
+    </script>
 </body>
 
 </html>
