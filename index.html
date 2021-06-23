@@ -61,7 +61,7 @@
                         <p class="animate__animated animate__fadeInRight">June Wu's portfolio</p>
                     </div>
                     <div class="click-down">
-                        <a href="#about">
+                        <a @click="godown('about')">
                             <h4 class="animate__animated animate__bounce animate__infinite">
                                 <i class="fas fa-chevron-down"></i>
                             </h4>
@@ -85,9 +85,11 @@
                         </div>
                     </div>
                     <div class="buttons">
-                        <span>
-                            View June's Resume
-                        </span>
+                        <a href="https://drive.google.com/file/d/1YMGukGwzuyiI78tubx_o-z-XqmYsYet6/view?usp=sharing" target="_blank">
+                            <span>
+                                View June's Resume
+                            </span>
+                        </a>
                         <a href="https://github.com/s414june" target="_blank">
                             <i class="fab fa-github-square"></i>
                         </a>
@@ -163,6 +165,10 @@
             methods: {
                 toggle() {
                     this.isShow = !this.isShow
+                },
+                godown(offset) {
+                    offset = document.querySelector('#' + offset)
+                    scrollTo(0, [offset][0].offsetTop - 47)
                 },
                 goto(offset) {
                     offset = document.querySelector('#' + offset)

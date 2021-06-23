@@ -228,13 +228,14 @@ main section {
 }
 
 #works .container .flex-item p {
-  width: 500px;
+  width: 400px;
   font-size: 1.2rem;
 }
 
 #works .container .flex-item > a {
-  margin: 20px;
+  margin: 10px;
   position: relative;
+  padding: 30px;
 }
 
 #works .container .flex-item .work-mask {
@@ -327,7 +328,10 @@ footer {
         flex-wrap: nowrap;
   }
   #works .container div img {
-    width: 400px;
+    width: 200px;
+  }
+  #works .container div p {
+    width: 100%;
   }
 }
 
@@ -337,7 +341,10 @@ footer {
         flex-wrap: wrap;
   }
   #works .container div img {
-    width: 600px;
+    width: 100%;
+  }
+  #works .container div p {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

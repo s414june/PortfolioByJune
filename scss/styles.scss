@@ -169,12 +169,13 @@ main {
                 padding-bottom: 1rem;
             }
             p {
-                width: 500px;
+                width: 400px;
                 font-size: 1.2rem;
             }
             &>a {
-                margin: 20px;
+                margin: 10px;
                 position: relative;
+                padding: 30px;
             }
             .work-mask {
                 position: absolute;
@@ -256,7 +257,10 @@ footer {
             div {
                 flex-wrap: nowrap;
                 img {
-                    width: 400px;
+                    width: 200px;
+                }
+                p {
+                    width: 100%;
                 }
             }
         }
@@ -269,7 +273,10 @@ footer {
             div {
                 flex-wrap: wrap;
                 img {
-                    width: 600px;
+                    width: 100%;
+                }
+                p {
+                    width: 100%;
                 }
             }
         }
