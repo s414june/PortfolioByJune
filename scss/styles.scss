@@ -168,10 +168,6 @@ main {
                 font-weight: normal;
                 padding-bottom: 1rem;
             }
-            p {
-                width: 400px;
-                font-size: 1.2rem;
-            }
             &>a {
                 margin: 10px;
                 position: relative;
@@ -239,6 +235,10 @@ footer {
             width: 100px;
             padding: 60px 10px;
         }
+        p {
+            width: 400px;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -248,20 +248,23 @@ footer {
             width: 30%;
             padding: 20px 25px;
         }
+        p {
+            font-size: 1rem;
+        }
     }
 }
 
 @media (min-width: 768px) {
     #works {
         .container {
-            div {
+            .flex-item {
                 flex-wrap: nowrap;
                 img {
                     width: 200px;
                 }
-                p {
-                    width: 100%;
-                }
+            }
+            .work-detail {
+                width: 50%;
             }
         }
     }
@@ -270,12 +273,9 @@ footer {
 @media (max-width: 767.9px) {
     #works {
         .container {
-            div {
+            .flex-item {
                 flex-wrap: wrap;
                 img {
-                    width: 100%;
-                }
-                p {
                     width: 100%;
                 }
             }

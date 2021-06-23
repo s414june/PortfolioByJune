@@ -227,11 +227,6 @@ main section {
   padding-bottom: 1rem;
 }
 
-#works .container .flex-item p {
-  width: 400px;
-  font-size: 1.2rem;
-}
-
 #works .container .flex-item > a {
   margin: 10px;
   position: relative;
@@ -313,6 +308,10 @@ footer {
     width: 100px;
     padding: 60px 10px;
   }
+  #skills p {
+    width: 400px;
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 575.9px) {
@@ -320,30 +319,30 @@ footer {
     width: 30%;
     padding: 20px 25px;
   }
+  #skills p {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 768px) {
-  #works .container div {
+  #works .container .flex-item {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  #works .container div img {
+  #works .container .flex-item img {
     width: 200px;
   }
-  #works .container div p {
-    width: 100%;
+  #works .container .work-detail {
+    width: 50%;
   }
 }
 
 @media (max-width: 767.9px) {
-  #works .container div {
+  #works .container .flex-item {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #works .container div img {
-    width: 100%;
-  }
-  #works .container div p {
+  #works .container .flex-item img {
     width: 100%;
   }
 }
