@@ -111,7 +111,9 @@
                     <div class="flex-item" v-for="(item,index) in works">
                         <a :href="item.src" target="_blank">
                             <img :src="item.img" alt="">
-                            <div class="work-mask"></div>
+                            <div class="work-mask" :class={active:isHover} @mouseover='showHover' @mouseout='hideHover'>
+                                {{item.english}}
+                            </div>
                         </a>
                         <div class="work-detail">
                             <h3>{{item.title}}</h3>
@@ -145,21 +147,24 @@
             el: "#app",
             data: {
                 isShow: false,
-                // isHover: false,
+                isHover: false,
                 works: [{
                     src: 'https://s414june.github.io/froggycoffee/',
                     img: './img/works/work (1).jpg',
                     title: '雛蛙咖啡',
+                    english: 'froggy café',
                     content: '文藝青年幾乎都有這樣一個夢想——開一家讀書咖啡廳。使用bootstrap和純javascript構建的購物車網頁，為前端demo。運用loaclstorage儲存資料，確認購買後會清空購物車。'
                 }, {
                     src: 'https://s414june.github.io/greenpomo/',
                     img: './img/works/work (2).jpg',
                     title: '綠色番茄鐘',
+                    english: 'GreenPomo',
                     content: '想要解決拖延症、提高工作效率的人，應該對番茄鐘不陌生？這個計時網頁可以為使用者倒數，並記錄做了幾個番茄，用譬喻的方式增加工作趣味。使用vue-cli製作，仍在建構中。'
                 }, {
                     src: 'https://drive.google.com/drive/folders/1IS__tl5PhjshY3wNEL5owKKEfYuZbo0D?usp=sharing',
                     img: './img/works/work (3).jpg',
                     title: '平面設計',
+                    english: 'Graphic Design',
                     content: '以大學社團設計的作品為主，佐以少量手繪。'
                 }]
             },
@@ -175,6 +180,13 @@
                     offset = document.querySelector('#' + offset)
                     scrollTo(0, [offset][0].offsetTop - 47)
                     this.toggle()
+                },
+                showHover(e) {
+                    e.target.classList.add('active')
+                },
+                hideHover(e) {
+
+                    e.target.classList.remove('active')
                 }
             }
         })

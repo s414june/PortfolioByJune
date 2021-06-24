@@ -208,15 +208,17 @@ main section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-#works .container .flex-item img,
 #works .container .flex-item p,
 #works .container .flex-item h3 {
   padding: 0 2rem;
 }
 
 #works .container .flex-item img {
+  width: 100%;
   -webkit-box-shadow: 2px 2px 5px #aaa;
           box-shadow: 2px 2px 5px #aaa;
 }
@@ -231,6 +233,35 @@ main section {
   margin: 10px;
   position: relative;
   padding: 30px;
+}
+
+#works .container .flex-item .work-mask {
+  position: absolute;
+  opacity: 0;
+  width: calc(100% - 60px);
+  height: calc(100% - 63px);
+  top: 30px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  font-family: 'Lobster', cursive;
+}
+
+#works .container .flex-item .work-mask.active {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 #contact {
@@ -316,12 +347,8 @@ footer {
 }
 
 @media (min-width: 768px) {
-  #works .container .flex-item {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  #works .container .flex-item img {
-    width: 200px;
+  #works .container .flex-item a {
+    width: 300px;
   }
   #works .container .work-detail {
     width: 50%;
@@ -329,10 +356,6 @@ footer {
 }
 
 @media (max-width: 767.9px) {
-  #works .container .flex-item {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
   #works .container .flex-item img {
     width: 100%;
   }
