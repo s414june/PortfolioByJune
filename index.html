@@ -42,7 +42,7 @@
                 <a href="index.html">
                     <p class="logo">June Wu</p>
                 </a>
-                <div style="padding-right:3rem;">
+                <div class="toggle-container">
                     <i class="fas fa-bars" @click='toggle'></i>
                 </div>
             </div>
@@ -174,7 +174,7 @@
                 },
                 godown(offset) {
                     offset = document.querySelector('#' + offset)
-                    scrollTo(0, [offset][0].offsetTop - 47)
+                    scrollTo(0, [offset][0].offsetTop)
                 },
                 goto(offset) {
                     offset = document.querySelector('#' + offset)
