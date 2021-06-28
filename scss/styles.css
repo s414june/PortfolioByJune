@@ -174,7 +174,7 @@ main section {
 }
 
 #about .buttons a i {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   padding-left: .8rem;
 }
 
@@ -196,6 +196,26 @@ main section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+#skills img {
+  width: 30%;
+  padding: 20px 25px;
+}
+
+#skills p {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  #skills img {
+    width: 100px;
+    padding: 60px 10px;
+  }
+  #skills p {
+    width: 400px;
+    font-size: 1.2rem;
+  }
 }
 
 #works .container {
@@ -268,6 +288,19 @@ main section {
   transition: .3s;
 }
 
+#works .container .flex-item img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  #works .container .flex-item a {
+    width: 300px;
+  }
+  #works .container .work-detail {
+    width: 50%;
+  }
+}
+
 #contact {
   padding-bottom: 3rem;
 }
@@ -292,10 +325,16 @@ main section {
   border: 0 0 1px 0;
   margin: 1rem;
   border-bottom: 2px solid #000;
-  width: 50%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (min-width: 768px) {
+  #contact label {
+    width: 50%;
+  }
 }
 
 #contact label i {
@@ -327,41 +366,5 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: .8rem;
-}
-
-@media (min-width: 576px) {
-  #skills img {
-    width: 100px;
-    padding: 60px 10px;
-  }
-  #skills p {
-    width: 400px;
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 575.9px) {
-  #skills img {
-    width: 30%;
-    padding: 20px 25px;
-  }
-  #skills p {
-    font-size: 1rem;
-  }
-}
-
-@media (min-width: 768px) {
-  #works .container .flex-item a {
-    width: 300px;
-  }
-  #works .container .work-detail {
-    width: 50%;
-  }
-}
-
-@media (max-width: 767.9px) {
-  #works .container .flex-item img {
-    width: 100%;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

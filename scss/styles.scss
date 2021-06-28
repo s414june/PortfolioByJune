@@ -129,7 +129,7 @@ main {
             justify-content: center;
             align-items: center;
             i {
-                font-size: 2.8rem;
+                font-size: 2.5rem;
                 padding-left: .8rem;
             }
         }
@@ -148,6 +148,23 @@ main {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+    }
+    img {
+        width: 30%;
+        padding: 20px 25px;
+    }
+    p {
+        font-size: 1rem;
+    }
+    @media (min-width: 576px) {
+        img {
+            width: 100px;
+            padding: 60px 10px;
+        }
+        p {
+            width: 400px;
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -197,6 +214,21 @@ main {
                 }
             }
         }
+        .flex-item {
+            img {
+                width: 100%;
+            }
+        }
+        @media (min-width: 768px) {
+            .flex-item {
+                a {
+                    width: 300px;
+                }
+            }
+            .work-detail {
+                width: 50%;
+            }
+        }
     }
 }
 
@@ -212,7 +244,10 @@ main {
         border: 0 0 1px 0;
         margin: 1rem;
         border-bottom: 2px solid #000;
-        width: 50%;
+        width: 80%;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
         display: flex;
         i {
             font-size: 1.5rem;
@@ -242,56 +277,4 @@ footer {
     text-align: center;
     padding: 10px;
     font-size: .8rem;
-}
-
-@media (min-width: 576px) {
-    #skills {
-        img {
-            width: 100px;
-            padding: 60px 10px;
-        }
-        p {
-            width: 400px;
-            font-size: 1.2rem;
-        }
-    }
-}
-
-@media (max-width: 575.9px) {
-    #skills {
-        img {
-            width: 30%;
-            padding: 20px 25px;
-        }
-        p {
-            font-size: 1rem;
-        }
-    }
-}
-
-@media (min-width: 768px) {
-    #works {
-        .container {
-            .flex-item {
-                a {
-                    width: 300px;
-                }
-            }
-            .work-detail {
-                width: 50%;
-            }
-        }
-    }
-}
-
-@media (max-width: 767.9px) {
-    #works {
-        .container {
-            .flex-item {
-                img {
-                    width: 100%;
-                }
-            }
-        }
-    }
 }
