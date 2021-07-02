@@ -32,8 +32,8 @@ function scrollAnimateMulti(allElement, animation) {
     let node = document.querySelectorAll(allElement)
     let elparent = node[0].parentElement
     let elementOffsetTop = elparent.offsetTop
-    let winInnerHeight = window.innerHeight / 2
-    let animateOffset = elementOffsetTop - winInnerHeight
+    let winHeightHalf = window.innerHeight / 2
+    let animateOffset = elementOffsetTop - winHeightHalf
     window.addEventListener('scroll', () => {
         if (window.pageYOffset >= animateOffset && window.pageYOffset < animateOffset + 50) {
             for (let i = 0; i < node.length; i++) {
@@ -42,7 +42,7 @@ function scrollAnimateMulti(allElement, animation) {
         }
     })
 }
-
+// scrollAnimateMulti('css選擇器', 'animatecss效果名稱')
 scrollAnimateMulti('#skills img', 'zoomIn')
 scrollAnimate('#about h2', 'bounce')
 scrollAnimate('#about img', 'flipInX')
