@@ -15,6 +15,19 @@ const animateCSSJ = (element, animation, prefix = 'animate__') =>
         node.addEventListener('animationend', handleAnimationEnd, { once: true });
     });
 
+function scrollAnimate(element, animation) {
+    let node = document.querySelector(element)
+    let elementOffsetTop = node.offsetTop
+    let elementHeight = node.offsetHeight
+    let winHeightHalf = window.innerHeight / 2
+    let animateOffset = elementOffsetTop - elementHeight - winHeightHalf
+    window.addEventListener('scroll', (e) => {
+        if (window.pageYOffset >= animateOffset && window.pageYOffset < animateOffset + 50) {
+            animateCSSJ(node, animation);
+        }
+    })
+}
+
 function scrollAnimateMulti(allElement, animation) {
     let node = document.querySelectorAll(allElement)
     let elparent = node[0].parentElement
@@ -26,19 +39,6 @@ function scrollAnimateMulti(allElement, animation) {
             for (let i = 0; i < node.length; i++) {
                 animateCSSJ(node[i], animation)
             }
-        }
-    })
-}
-
-function scrollAnimate(element, animation) {
-    let node = document.querySelector(element)
-    let elementOffsetTop = node.offsetTop
-    let elementHeight = node.offsetHeight
-    let winHeightHalf = window.innerHeight / 2
-    let animateOffset = elementOffsetTop - elementHeight - winHeightHalf
-    window.addEventListener('scroll', (e) => {
-        if (window.pageYOffset >= animateOffset && window.pageYOffset < animateOffset + 50) {
-            animateCSSJ(node, animation);
         }
     })
 }
