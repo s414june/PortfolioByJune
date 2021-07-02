@@ -19,9 +19,8 @@ function scrollAnimateMulti(allElement, animation) {
     let node = document.querySelectorAll(allElement)
     let elparent = node[0].parentElement
     let elementOffsetTop = elparent.offsetTop
-    let elementHeight = elparent.offsetHeight
     let winInnerHeight = window.innerHeight / 2
-    let animateOffset = elementOffsetTop - elementHeight - winInnerHeight
+    let animateOffset = elementOffsetTop - winInnerHeight
     window.addEventListener('scroll', () => {
         if (window.pageYOffset >= animateOffset && window.pageYOffset < animateOffset + 50) {
             for (let i = 0; i < node.length; i++) {
@@ -35,8 +34,8 @@ function scrollAnimate(element, animation) {
     let node = document.querySelector(element)
     let elementOffsetTop = node.offsetTop
     let elementHeight = node.offsetHeight
-    let winInnerHeight = window.innerHeight / 2
-    let animateOffset = elementOffsetTop - elementHeight - winInnerHeight
+    let winHeightHalf = window.innerHeight / 2
+    let animateOffset = elementOffsetTop - elementHeight - winHeightHalf
     window.addEventListener('scroll', (e) => {
         if (window.pageYOffset >= animateOffset && window.pageYOffset < animateOffset + 50) {
             animateCSSJ(node, animation);
