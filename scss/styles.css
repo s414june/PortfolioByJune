@@ -6,30 +6,24 @@
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
-
 html a {
   color: #000;
   text-decoration: none;
 }
 
 .logo {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
 }
 
 .navbar {
   padding: 1rem;
   width: calc(100vw - 2rem);
   font-size: 2rem;
-  -webkit-box-shadow: 0 1px 5px #aaa;
-          box-shadow: 0 1px 5px #aaa;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-shadow: 0 1px 5px #aaa;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: -webkit-sticky;
   position: fixed;
   top: 0;
@@ -37,7 +31,6 @@ html a {
   background-color: #fff;
   cursor: pointer;
 }
-
 .navbar .toggle-container {
   padding-right: 1.8rem;
 }
@@ -49,34 +42,26 @@ html a {
   width: 200px;
   height: 100vh;
   background-color: #ffffff;
-  -webkit-box-shadow: -1px 5px 5px #aaa;
-          box-shadow: -1px 5px 5px #aaa;
-  -webkit-transform: translateX(100vw);
-          transform: translateX(100vw);
-  -webkit-transition: .5s;
-  transition: .5s;
+  box-shadow: -1px 5px 5px #aaa;
+  transform: translateX(100vw);
+  transition: 0.5s;
   z-index: 30;
   cursor: pointer;
 }
-
 .menu.active {
-  -webkit-transform: translateX(calc(100vw - 200px - 6rem));
-          transform: translateX(calc(100vw - 200px - 6rem));
-  -webkit-transition: .5s;
-  transition: .5s;
+  transform: translateX(calc(100vw - 200px - 6rem));
+  transition: 0.5s;
 }
-
 .menu .logo {
   font-size: 2rem;
   font-weight: normal;
   padding: 1rem;
 }
-
 .menu p {
   padding: 1rem;
   font-size: 1.2rem;
-  font-family: 'Noto Sans TC', sans-serif;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .mask {
@@ -91,108 +76,66 @@ html a {
 main h2 {
   text-align: center;
   font-size: 2rem;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   padding-bottom: 2rem;
 }
-
 main section {
   padding: 3rem 0 0 0;
 }
 
 #about .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0 50px;
 }
-
 #about .container img {
   border-radius: 50%;
   width: 200px;
 }
-
 #about .container .intro {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   text-align: center;
   font-size: 1.2rem;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
 }
-
 #about .buttons {
-  font-family: 'Noto Sans TC', sans-serif;
-  font-family: 'Raleway', sans-serif;
-  padding: .5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Raleway", sans-serif;
+  padding: 0.5rem;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 #about .buttons span {
   background-color: #000;
   color: #fff;
   border-radius: 6px;
-  padding: 0 .7rem;
+  padding: 0 0.7rem;
   font-size: 1rem;
   line-height: 2.6rem;
   height: 2.6rem;
   margin: 5px 0;
 }
-
 #about .buttons a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #about .buttons a i {
   font-size: 2.5rem;
-  padding-left: .8rem;
+  padding-left: 0.8rem;
 }
-
 @media (min-width: 576px) {
   #about .buttons {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -203,28 +146,14 @@ main section {
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
-
 #skills img {
   width: 30%;
   padding: 20px 25px;
 }
-
 #skills p {
   font-size: 1rem;
 }
-
 @media (min-width: 576px) {
   #skills img {
     width: 100px;
@@ -239,77 +168,52 @@ main section {
 #works .container {
   padding: 0 1rem;
 }
-
 #works .container .flex-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 #works .container .flex-item p,
 #works .container .flex-item h3 {
   padding: 0 2rem;
 }
-
 #works .container .flex-item img {
   width: 100%;
-  -webkit-box-shadow: 2px 2px 5px #aaa;
-          box-shadow: 2px 2px 5px #aaa;
+  box-shadow: 2px 2px 5px #aaa;
 }
-
 #works .container .flex-item h3 {
   font-size: 1.5rem;
   font-weight: normal;
   padding-bottom: 1rem;
 }
-
 #works .container .flex-item > a {
   margin: 10px;
   position: relative;
   padding: 30px;
 }
-
 #works .container .flex-item .work-mask {
   position: absolute;
   opacity: 0;
   width: calc(100% - 60px);
   height: calc(100% - 63px);
   top: 30px;
-  -webkit-transition: .3s;
-  transition: .3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  transition: 0.3s;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   font-size: 2rem;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
 }
-
 #works .container .flex-item .work-mask.active {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.3);
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
 }
-
 #works .container .flex-item img {
   width: 100%;
 }
-
 @media (min-width: 768px) {
   #works .container .flex-item a {
     width: 300px;
@@ -322,59 +226,41 @@ main section {
 #contact {
   padding-bottom: 3rem;
 }
-
 #contact > form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
 #contact label {
   border: 0 0 1px 0;
   margin: 1rem;
   border-bottom: 2px solid #000;
   width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 @media (min-width: 768px) {
   #contact label {
     width: 50%;
   }
 }
-
 #contact label i {
   font-size: 1.5rem;
   padding-right: 1rem;
 }
-
 #contact input {
   border: none;
   outline: none;
   font-size: 1.2rem;
   padding-bottom: 1rem;
 }
-
 #contact button {
   background-color: #000;
   color: #fff;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.2rem;
   border-radius: 5px;
 }
-
 #contact button i {
   font-size: 1rem;
   padding-right: 10px;
@@ -383,6 +269,7 @@ main section {
 footer {
   text-align: center;
   padding: 10px;
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
+
 /*# sourceMappingURL=styles.css.map */
