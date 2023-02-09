@@ -146,6 +146,8 @@ main section {
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
+  width: 100vw;
+  overflow: hidden;
 }
 #skills img {
   width: 30%;
