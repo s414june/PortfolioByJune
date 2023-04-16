@@ -52,6 +52,7 @@
                 <p @click="goto('about')">About me</p>
                 <p @click="goto('skills')">Skills</p>
                 <p @click="goto('works')">Works</p>
+                <p @click="goto('others')">Others</p>
                 <p @click="goto('contact')">Contact</p>
             </div>
             <section class="carouselOutside">
@@ -129,6 +130,19 @@
                     </div>
                 </div>
             </section>
+            <section id="others">
+                <h2>Others</h2>
+                <div class="container">
+                    <div class="flex-item">
+                        <a v-for="(item,index) in others" :href="item.src" target="_blank">
+                            <img :src="item.video" :alt="item.english" loop="infinite">
+                            <div class="work-mask" :class={active:isHover} @mouseover='showHover' @mouseout='hideHover'>
+                                {{item.english}}
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
             <section id="contact">
                 <h2>Contact</h2>
                 <form action="https://formspree.io/f/xwkabgqr" method="POST">
@@ -145,7 +159,7 @@
                 </form>
             </section>
         </main>
-        <footer>© June Wu 2021 | All Rights Reserved</footer>
+        <footer>© June Wu 2023 | All Rights Reserved</footer>
     </div>
 
 
@@ -161,13 +175,13 @@
                     title: '[青雲客+繁化姬]聊天機器人',
                     english: 'Chatbot Qingyunke',
                     content: '順著ChatGpt等AI機器人的風潮，讓閒聊機器人跟你一起聊天！使用了青雲客進行機器人回應的串接，並使用繁化姬進行簡繁轉換。使用Vite+Vue3+Typescript+Tailwind開發。'
-                },{
+                }, {
                     src: 'https://s414june.github.io/my-first-vite/',
                     img: './img/works/my-first-vite.jpg',
                     title: '問卷蛙 - 遊客滿意度調查',
                     english: 'Survey Frog - Demo',
-                    content: '問卷可以說是最為實用的網頁工具之一，介面美化、驗證資料等都是非常重要的環節。問卷蛙使用Vue Router來切換不同頁面，並使用Vuex來進行狀態管理，讓管理者可以透過編輯Object來調整問卷內容！'
-                },{
+                    content: '問卷可以說是最為實用的網頁工具之一，介面美化、驗證資料等都是非常重要的環節。問卷蛙使用Vue Router來切換不同頁面，並使用Vuex來進行狀態管理，增進程式管理效率！'
+                }, {
                     src: 'https://s414june.github.io/froggycoffee/',
                     img: './img/works/froggycoffee.jpg',
                     title: '雛蛙咖啡',
@@ -179,6 +193,23 @@
                     title: '綠色番茄鐘',
                     english: 'GreenPomo',
                     content: '想要解決拖延症、提高工作效率的人，應該對番茄鐘不陌生？這個計時網頁可以讓使用者自訂倒數時間，為使用者倒數，並記錄做了幾個番茄，用譬喻的方式增加工作趣味。使用vue-cli製作。'
+                }],
+                others: [{
+                    src: 'https://s414june.github.io/threejsFirstDemo/',
+                    video:'./video/threejsball.gif',
+                    english: 'Feel This Sphere'
+                }, {
+                    src: 'https://s414june.github.io/windmill-blender-threejs/',
+                    video:'./video/threejswind.gif',
+                    english: 'Windmill'
+                }, {
+                    src: 'https://s414june.github.io/ISBNscanner/',
+                    video:'./video/isbn.gif',
+                    english: 'ISBN Scanner'
+                }, {
+                    src: 'https://s414june.github.io/LseafletTest2/',
+                    video:'./video/leaflet.gif',
+                    english: 'Lseaflet Map'
                 }]
             },
             methods: {
