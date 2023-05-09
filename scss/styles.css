@@ -184,6 +184,28 @@ main section {
 #others .container .flex-item h3 {
   padding: 0 2rem;
 }
+#works .container .flex-item p .fa,
+#works .container .flex-item h3 .fa,
+#others .container .flex-item p .fa,
+#others .container .flex-item h3 .fa {
+  font-size: 14px;
+  transform: translateY(3px);
+  margin-right: 3px;
+}
+#works .container .flex-item p a,
+#works .container .flex-item h3 a,
+#others .container .flex-item p a,
+#others .container .flex-item h3 a {
+  text-decoration: underline;
+  font-size: 0.9em;
+  line-height: 1;
+}
+#works .container .flex-item p a:nth-of-type(1),
+#works .container .flex-item h3 a:nth-of-type(1),
+#others .container .flex-item p a:nth-of-type(1),
+#others .container .flex-item h3 a:nth-of-type(1) {
+  line-height: 3;
+}
 #works .container .flex-item img,
 #others .container .flex-item img {
   width: 100%;
@@ -225,11 +247,11 @@ main section {
 }
 @media (min-width: 768px) {
   #works .container .flex-item a,
-#others .container .flex-item a {
+  #others .container .flex-item a {
     width: 300px;
   }
   #works .container .work-detail,
-#others .container .work-detail {
+  #others .container .work-detail {
     width: 50%;
   }
 }

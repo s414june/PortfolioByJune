@@ -125,7 +125,15 @@
                         </a>
                         <div class="work-detail">
                             <h3>{{item.title}}</h3>
-                            <p>{{item.content}}</p>
+                            <p>
+                                {{item.content}}
+                                <br />
+                                <i class="fa-solid fa-link fa"></i>
+                                <a :href="item.src">{{item.src}}</a>
+                                <br />
+                                <i class="fa-solid fa-code fa"></i>
+                                <a :href="item.source_code">{{item.source_code}}</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -174,25 +182,29 @@
                     img: './img/works/chatbot-qingyunke.jpg',
                     title: '[青雲客+繁化姬]聊天機器人',
                     english: 'Chatbot Qingyunke',
-                    content: '順著ChatGpt等AI機器人的風潮，讓閒聊機器人跟你一起聊天！使用了青雲客進行機器人回應的串接，並使用繁化姬進行簡繁轉換。使用Vite+Vue3+Typescript+Tailwind開發。'
+                    content: '順著ChatGpt等AI機器人的風潮，讓閒聊機器人跟你一起聊天！使用了青雲客進行機器人回應的串接，並使用繁化姬進行簡繁轉換。使用Vite+Vue3+Typescript+Tailwind開發。',
+                    source_code:'https://github.com/s414june/ChatBot_QingYunKe'
                 }, {
                     src: 'https://s414june.github.io/my-first-vite/',
                     img: './img/works/my-first-vite.jpg',
                     title: '問卷蛙 - 遊客滿意度調查',
                     english: 'Survey Frog - Demo',
                     content: '問卷可以說是最為實用的網頁工具之一，介面美化、驗證資料等都是非常重要的環節。問卷蛙使用Vue Router來切換不同頁面，並使用Vuex來進行狀態管理，增進程式管理效率！'
+                    ,source_code:'https://github.com/s414june/SurveyFrog'
                 }, {
                     src: 'https://s414june.github.io/froggycoffee/',
                     img: './img/works/froggycoffee.jpg',
                     title: '雛蛙咖啡',
                     english: 'froggy café',
                     content: '文藝青年幾乎都有這樣一個夢想——開一家讀書咖啡廳。使用bootstrap和純javascript構建的購物車網頁，為前端demo。運用loaclstorage儲存資料，確認購買後會清空購物車。'
+                    ,source_code:'https://github.com/s414june/froggycoffee'
                 }, {
                     src: 'https://s414june.github.io/greenpomo/',
                     img: './img/works/greenpomo.jpg',
                     title: '綠色番茄鐘',
                     english: 'GreenPomo',
                     content: '想要解決拖延症、提高工作效率的人，應該對番茄鐘不陌生？這個計時網頁可以讓使用者自訂倒數時間，為使用者倒數，並記錄做了幾個番茄，用譬喻的方式增加工作趣味。使用vue-cli製作。'
+                    ,source_code:'https://github.com/s414june/greenpomo'
                 }],
                 others: [{
                     src: 'https://s414june.github.io/threejsFirstDemo/',
