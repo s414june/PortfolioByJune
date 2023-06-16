@@ -62,7 +62,7 @@
                         <p class="animate__animated animate__fadeInRight">June Wu's portfolio</p>
                     </div>
                     <div class="click-down">
-                        <a @click="godown('about')">
+                        <a @click="godown('about')" href="javascript:void(0)">
                             <h4 class="animate__animated animate__bounce animate__infinite">
                                 <i class="fas fa-chevron-down"></i>
                             </h4>
@@ -128,11 +128,16 @@
                             <p>
                                 {{item.content}}
                                 <br />
-                                <i class="fa-solid fa-link fa"></i>
-                                <a :href="item.src" target="_blank">{{item.src}}</a>
                                 <br />
-                                <i class="fa-solid fa-code fa"></i>
-                                <a :href="item.source_code" target="_blank">{{item.source_code}}</a>
+                                <span>
+                                    <i class="fa-solid fa-link fa"></i>
+                                    <a :href="item.src" target="_blank">{{item.src}}</a>
+                                </span>
+                                <br />
+                                <span>
+                                    <i class="fa-solid fa-code fa"></i>
+                                    <a :href="item.source_code" target="_blank">{{item.source_code}}</a>
+                                </span>
                             </p>
                         </div>
                     </div>

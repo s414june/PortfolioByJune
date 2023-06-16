@@ -11,7 +11,7 @@ html {
 html a {
   color: #000;
   text-decoration: none;
-  white-space: pre-line !important;
+  word-break: break-all;
 }
 
 .logo {
@@ -203,6 +203,18 @@ main section {
   transform: translateY(3px);
   margin-right: 3px;
 }
+#works .container .flex-item p span,
+#works .container .flex-item h3 span,
+#others .container .flex-item p span,
+#others .container .flex-item h3 span {
+  display: inline-block;
+}
+#works .container .flex-item p span:not(:last-child),
+#works .container .flex-item h3 span:not(:last-child),
+#others .container .flex-item p span:not(:last-child),
+#others .container .flex-item h3 span:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
 #works .container .flex-item p a,
 #works .container .flex-item h3 a,
 #others .container .flex-item p a,
@@ -210,12 +222,6 @@ main section {
   text-decoration: underline;
   font-size: 0.9em;
   line-height: 1;
-}
-#works .container .flex-item p a:nth-of-type(1),
-#works .container .flex-item h3 a:nth-of-type(1),
-#others .container .flex-item p a:nth-of-type(1),
-#others .container .flex-item h3 a:nth-of-type(1) {
-  line-height: 3;
 }
 #works .container .flex-item img,
 #others .container .flex-item img {
