@@ -43,10 +43,10 @@
                     <p class="logo">June Wu</p>
                 </a>
                 <div class="toggle-container">
-                    <i class="fas fa-bars" @click='toggle'></i>
+                    <i class="fas fa-bars" @click='toggle($event)'></i>
                 </div>
             </div>
-            <div class="mask" v-show="isShow" @click='toggle'></div>
+            <div class="mask" v-show="isShow" @click='toggle($event)'></div>
             <div class='menu' :class={active:isShow}>
                 <p @click="goto('home')">Home</p>
                 <p @click="goto('about')">About me</p>
@@ -230,7 +230,11 @@
                 }]
             },
             methods: {
-                toggle() {
+                toggle(event) {
+                    if(event){
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
                     this.isShow = !this.isShow
                 },
                 godown(offset) {
