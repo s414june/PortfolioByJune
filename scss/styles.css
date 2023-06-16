@@ -13,6 +13,7 @@ html a {
   text-decoration: none;
   word-break: break-all;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .logo {
