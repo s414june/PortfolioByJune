@@ -18,6 +18,9 @@ html a {
 html a::selection {
   background: transparent;
 }
+html a:hover {
+  background: transparent;
+}
 
 .logo {
   font-family: "Lobster", cursive;
