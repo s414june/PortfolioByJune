@@ -11,6 +11,7 @@ html {
 html a {
   color: #000;
   text-decoration: none;
+  white-space: pre-line;
 }
 
 .logo {
@@ -48,9 +49,19 @@ html a {
   z-index: 30;
   cursor: pointer;
 }
+@media (max-width: 300px) {
+  .menu {
+    width: 50vw;
+  }
+}
 .menu.active {
   transform: translateX(calc(100vw - 200px - 6rem));
   transition: 0.5s;
+}
+@media (max-width: 300px) {
+  .menu.active {
+    transform: translateX(calc(100vw - 50vw - 6rem));
+  }
 }
 .menu .logo {
   font-size: 2rem;
@@ -226,6 +237,7 @@ main section {
 }
 #works .container .flex-item .work-mask,
 #others .container .flex-item .work-mask {
+  white-space: nowrap;
   position: absolute;
   opacity: 0;
   width: calc(100% - 60px);
@@ -236,7 +248,7 @@ main section {
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: "Lobster", cursive;
 }
 #works .container .flex-item .work-mask.active,
@@ -247,11 +259,15 @@ main section {
 }
 @media (min-width: 768px) {
   #works .container .flex-item a,
-  #others .container .flex-item a {
+#others .container .flex-item a {
     width: 300px;
   }
+  #works .container .flex-item .work-mask,
+#others .container .flex-item .work-mask {
+    font-size: 2rem;
+  }
   #works .container .work-detail,
-  #others .container .work-detail {
+#others .container .work-detail {
     width: 50%;
   }
 }
