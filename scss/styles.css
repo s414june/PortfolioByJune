@@ -12,6 +12,7 @@ html a {
   color: #000;
   text-decoration: none;
   word-break: break-all;
+  user-select: none;
 }
 
 .logo {
