@@ -16,6 +16,9 @@ html {
         user-select: none;
         -webkit-tap-highlight-color: transparent;
     }
+    a::selection{
+        background: transparent;
+    }
 }
 
 .logo {
