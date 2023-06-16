@@ -1,7 +1,7 @@
 $menuWidth:200px;
 $menuMaxWidth:50vw;
 @mixin getmenu() {
-    @media(max-width:300px){
+    @media(max-width:768px){
         @content;
     }
   }

@@ -49,7 +49,7 @@ html a {
   z-index: 30;
   cursor: pointer;
 }
-@media (max-width: 300px) {
+@media (max-width: 768px) {
   .menu {
     width: 50vw;
   }
@@ -58,7 +58,7 @@ html a {
   transform: translateX(calc(100vw - 200px - 6rem));
   transition: 0.5s;
 }
-@media (max-width: 300px) {
+@media (max-width: 768px) {
   .menu.active {
     transform: translateX(calc(100vw - 50vw - 6rem));
   }
